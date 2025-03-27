@@ -14,7 +14,12 @@ $ pip install -r requirements.txt
 
 2. Crea una cuenta gratuita de Pinecone y obtén tu clave API en [Pinecone](https://www.pinecone.io/).
 
-3. Crea un archivo `.env` con las siguientes variables:
+3. Instala ffmpeg (necesario para Whisper):
+   - En macOS: `brew install ffmpeg`
+   - En Ubuntu/Debian: `sudo apt-get install ffmpeg`
+   - En Windows: Descarga desde https://ffmpeg.org/download.html
+
+4. Crea un archivo `.env` con las siguientes variables:
 
 ```bash
 OPENAI_API_KEY = tu_clave_de_openai
@@ -74,3 +79,8 @@ Las principales dependencias del proyecto son:
 - openai-whisper: Para la transcripción de video
 - yt-dlp: Para la descarga de audio de YouTube
 - sentence-transformers: Para los embeddings de HuggingFace
+- ffmpeg: Necesario para la transcripción con Whisper
+
+**Nota importante**: 
+- No se necesita una clave API de HuggingFace para este proyecto, ya que utilizamos modelos que funcionan localmente.
+- Se requiere ffmpeg instalado en el sistema para que Whisper funcione correctamente.
