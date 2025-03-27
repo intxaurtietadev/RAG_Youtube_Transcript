@@ -1,14 +1,27 @@
-openai 
-langchain
-langchain-openai
-langchain_pinecone
-langchain[docarray]
-docarray
-pydantic==1.10.8
-pytube 
+# Core dependencies
+openai>=1.12.0
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-pinecone>=0.0.3
+langchain[docarray]>=0.1.0
+langchain-community>=0.0.1
 python-dotenv
-tiktoken 
-pinecone-client 
-scikit-learn
-ruff
+langchain-huggingface
+
+# Vector store and embeddings
+sentence-transformers
+pinecone-client>=3.0.0
+docarray>=0.21.0
+scikit-learn>=1.4.0
+
+# Data processing and utilities
+python-dotenv>=1.0.0
+tiktoken>=0.6.0
+yt-dlp>=2024.3.10
+
+# Audio processing
 git+https://github.com/openai/whisper.git
+
+# Development tools
+ruff>=0.3.0
+pydantic==1.10.8
