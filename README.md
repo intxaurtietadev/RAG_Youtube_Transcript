@@ -14,7 +14,12 @@ $ pip install -r requirements.txt
 
 2. Crea una cuenta gratuita de Pinecone y obtén tu clave API en [Pinecone](https://www.pinecone.io/).
 
-3. Crea un archivo `.env` con las siguientes variables:
+3. Instala ffmpeg (necesario para Whisper):
+   - En macOS: `brew install ffmpeg`
+   - En Ubuntu/Debian: `sudo apt-get install ffmpeg`
+   - En Windows: Descarga desde https://ffmpeg.org/download.html
+
+4. Crea un archivo `.env` con las siguientes variables:
 
 ```bash
 OPENAI_API_KEY = tu_clave_de_openai
@@ -42,7 +47,7 @@ El proyecto está organizado en un notebook Jupyter (`lurnova-rag-from-scratch.i
 
 ### PARTE III: Vector Store y Recuperación
 - Configuración de Pinecone como vector store
-- Generación y almacenamiento de embeddings usando HuggingFace
+- Generación y almacenamiento de embeddings usando OpenAI
 - Implementación de la cadena RAG completa
 - Búsqueda semántica para recuperar información relevante
 
@@ -50,7 +55,7 @@ El proyecto está organizado en un notebook Jupyter (`lurnova-rag-from-scratch.i
 
 - ✅ Transcripción automática de videos de YouTube
 - ✅ División de texto en chunks de tamaño configurable
-- ✅ Embeddings locales con HuggingFace (sin necesidad de API extra)
+- ✅ Embeddings con OpenAI
 - ✅ Almacenamiento vectorial en Pinecone
 - ✅ Sistema completo de RAG con búsqueda semántica
 - ✅ Cadenas combinadas para tareas complejas
@@ -77,4 +82,4 @@ Las principales dependencias del proyecto son:
 - pinecone y langchain_pinecone: Para el almacén vectorial
 - openai-whisper: Para la transcripción de video
 - yt-dlp: Para la descarga de audio de YouTube
-- sentence-transformers: Para los embeddings de HuggingFace
+- openai: Para los embeddings y modelos de lenguaje
