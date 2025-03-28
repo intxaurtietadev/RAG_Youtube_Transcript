@@ -19,6 +19,10 @@ $ pip install -r requirements.txt
 ```bash
 OPENAI_API_KEY = tu_clave_de_openai
 PINECONE_API_KEY = tu_clave_de_pinecone
+
+# Configuración de Pinecone
+PINECONE_ENV=gcp-starter
+PINECONE_REGION=us-east-1
 ```
 
 ## Estructura del proyecto
