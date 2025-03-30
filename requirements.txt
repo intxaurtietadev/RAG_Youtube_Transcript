@@ -25,4 +25,7 @@ ffmpeg  # Necesario para Whisper
 
 # Development tools
 ruff>=0.3.0
-pydantic==1.10.8
+# Reemplaza esta línea:
+# pydantic==1.10.8
+# Con:
+pydantic>=2.7.4,<3.0.0
